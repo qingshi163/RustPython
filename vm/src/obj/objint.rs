@@ -112,13 +112,10 @@ where
     I: PrimInt + TryFrom<&'a BigInt>,
 {
     I::try_from(i).map_err(|_| {
-        vm.new_overflow_error(
-            format!(
-                "Int value cannot fit into Rust {}",
-                std::any::type_name::<I>()
-            )
-            .to_owned(),
-        )
+        vm.new_overflow_error(format!(
+            "Python int too large to convert to Rust {}",
+            std::any::type_name::<I>()
+        ))
     })
 }
 
