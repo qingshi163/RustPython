@@ -57,5 +57,5 @@ opt-level = 3
 # # following patches are just waiting on a new version to be released to crates.io
 # nix = { git = "https://github.com/nix-rust/nix" }
 # crossbeam-utils = { git = "https://github.com/crossbeam-rs/crossbeam" }
-# socket2 = { git = "https://github.com/alexcrichton/socket2-rs" }
 # REDOX END
+socket2 = { git = "https://github.com/alexcrichton/socket2-rs", rev = "7bf31f9" }
